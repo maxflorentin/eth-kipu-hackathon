@@ -1,0 +1,25 @@
+services:
+  hardhat:
+    build: .
+    ports:
+      - "8545:8545"
+    volumes:
+      - .:/app
+    networks:
+      - hardhat-network
+
+  front:
+    build: ./client
+    container_name: eth-kipu-hackathon-front
+    ports:
+      - "3000:3000"
+    depends_on:
+      - hardhat
+    volumes:
+      - ./client:/app
+    networks:
+      - hardhat-network
+
+networks:
+  hardhat-network:
+    driver: bridge
