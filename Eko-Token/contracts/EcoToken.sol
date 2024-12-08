@@ -13,7 +13,11 @@ contract EcoToken is ERC20, Ownable, Pausable {
     address public feeCollector;
 
     // Evento para el registro de minting
-    event TokensMinted(address indexed greenPoint, address indexed user, uint256 amount);
+    event TokensMinted(
+        address indexed greenPoint,
+        address indexed user,
+        uint256 amount
+    );
     event TokensBurned(address indexed user, uint256 amount, uint256 fee);
 
     constructor(address _feeCollector) ERC20("EcoToken", "ECO") {
@@ -47,7 +51,10 @@ contract EcoToken is ERC20, Ownable, Pausable {
     }
 
     // Minting de tokens desde un Punto Verde
-    function mintFromGreenPoint(address to, uint256 amount) external onlyGreenPoint whenNotPaused {
+    function mintFromGreenPoint(
+        address to,
+        uint256 amount
+    ) external onlyGreenPoint whenNotPaused {
         require(to != address(0), "Invalid user address");
         require(amount > 0, "Amount must be greater than zero");
 
