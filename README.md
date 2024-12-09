@@ -80,3 +80,38 @@ This project is licensed under the MIT License.
 For more information, reach out via:
 
 - GitHub Issues: Submit Feedback
+
+
+--------------------------------
+## Eko Token
+
+EL contrato se encuentra deployado y verificado en Scroll-Sepolia
+
+[ECO-Token](https://sepolia.scrollscan.com/address/0xBCA881332E6E91165346E9159797f7647336d506#code)
+
+
+```bash
+Eko-Token/
+├── contracts/
+│   ├── EcoToken.sol         # Contrato principal
+│   ├── GreenPoint.sol       # Contratos auxiliares (si aplica)
+│   └── interfaces/          # Interfaces de contratos (si las necesitas)
+│       └── IEcoToken.sol
+├── test/
+│   ├── EcoToken.test.js     # Pruebas del contrato EcoToken
+│   ├── GreenPoint.test.js   # Pruebas para contratos auxiliares
+│   └── utils/               # Helpers y utilidades para pruebas
+│       └── testHelpers.js
+├── scripts/
+│   ├── deploy.js            # Script para desplegar contratos
+│   ├── mintTokens.js        # Scripts adicionales para interactuar con contratos
+│   └── burnTokens.js
+├── artifacts/               # Generado automáticamente: Compilaciones y ABI
+├── cache/                   # Generado automáticamente: Caché de compilación
+├── node_modules/            # Dependencias del proyecto (instaladas con npm/yarn)
+├── .env                     # Variables de entorno (claves, URL de red, etc.)
+├── hardhat.config.js        # Configuración de Hardhat
+├── package.json             # Dependencias del proyecto
+└── README.md                # Documentación del proyecto
+```
+
