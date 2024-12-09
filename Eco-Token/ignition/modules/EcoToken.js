@@ -14,4 +14,23 @@ module.exports = EcoTokenModule;
 
 
 // Deployment
-// npx hardhat ignition deploy ./ignition/modules/EcoToken.js
+/* 
+
+npx hardhat ignition deploy ./ignition/modules/EcoToken.js
+
+
+
+- Deploy en red Local
+npx hardhat node
+
+npx hardhat ignition deploy ./ignition/modules/EcoToken.js --network localhost
+
+
+- Deploy en red Sepolia
+npx hardhat ignition deploy ./ignition/modules/EcoToken.js --network sepolia
+EcoTokenModule#EcoToken - 0xBCA881332E6E91165346E9159797f7647336d506
+
+
+- Verificar el estado del contrato en Sepolia
+npx hardhat verify --network sepolia --force 0xBCA881332E6E91165346E9159797f7647336d506
+*/

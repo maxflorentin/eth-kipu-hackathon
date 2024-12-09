@@ -2,7 +2,7 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY
-const SEPOLIA_PRIVATE_KEY = process.env.SEPOLIA_PRIVATE_KEY
+const SCROLL_PRIVATE_KEY = process.env.SEPOLIA_PRIVATE_KEY
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 
 
@@ -21,9 +21,10 @@ module.exports = {
     },
   },
   networks: {
-    sepolia: {
+    scrollSepolia: {
       url: ALCHEMY_API_KEY,
-      accounts: [SEPOLIA_PRIVATE_KEY],
+      accounts: [`0x${SCROLL_PRIVATE_KEY}`], // Clave privada
+      chainId: 534351, // Chain ID de Scroll Sepolia
     },
   },
   etherscan: {
@@ -31,4 +32,7 @@ module.exports = {
       sepolia: ETHERSCAN_API_KEY,
     },
   },
+  sourcify: {
+    enabled: true
+  }
 };

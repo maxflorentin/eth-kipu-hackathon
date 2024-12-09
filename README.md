@@ -85,6 +85,11 @@ For more information, reach out via:
 --------------------------------
 ## Eko Token
 
+EL contrato se encuentra deployado y verificado en Scroll-Sepolia
+
+[ECO-Token](https://sepolia.scrollscan.com/address/0xBCA881332E6E91165346E9159797f7647336d506#code)
+
+
 ```bash
 Eko-Token/
 ├── contracts/
@@ -109,3 +114,4 @@ Eko-Token/
 ├── package.json             # Dependencias del proyecto
 └── README.md                # Documentación del proyecto
 ```
+
